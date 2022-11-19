@@ -3,11 +3,16 @@
 import { FormEvent, useState } from "react";
 import { v4 as uuid } from "uuid";
 import { Message } from "../typings";
+import useSWR from "swr";
+import fetcher from "../utils/fetchMessages";
 
 function ChatInput() {
 	const [input, setInput] = useState("");
+	const { data: messages, error, mutate } = useSWR("/api/getMessages", fetcher);
 
-	const addMessage = (e: FormEvent<HTMLFormElement>) => {
+	console.log(messages);
+
+	const addMessage = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
 		if (!input) return;
@@ -27,18 +32,24 @@ function ChatInput() {
 			email: "papareact.team@gmail.com",
 		};
 
-    const uploadMessageToUpstash = async () => {
-      const res = await fetch('/api/addMessage', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          message,
-        })
-      })
+		const uploadMessageToUpstash = async () => {
+			const data = await fetch("/api/addMessage", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					message,
+				}),
+			}).then((res) => res.json());
 
-      const data = await res.json()
+			return [data.message, ...messages!];
+		};
+
+		await mutate(uploadMessageToUpstash, {
+			optimisticData: [message, ...messages!],
+			rollbackOnError: true,
+		});
 	};
 
 	return (
