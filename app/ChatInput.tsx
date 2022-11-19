@@ -18,7 +18,7 @@ function ChatInput({ session }: Props) {
 	const addMessage = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
-		if (!input) return;
+		if (!input || !session) return;
 
 		const messageToSend = input;
 
@@ -30,9 +30,9 @@ function ChatInput({ session }: Props) {
 			id,
 			message: messageToSend,
 			created_at: Date.now(),
-			username: "Sonny Sangha",
-			profilePic: "https://links.papareact.com/jne",
-			email: "papareact.team@gmail.com",
+			username: session?.user?.name!,
+			profilePic: session?.user?.image!,
+			email: session?.user?.email!,
 		};
 
 		const uploadMessageToUpstash = async () => {

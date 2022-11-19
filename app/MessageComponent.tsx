@@ -1,12 +1,14 @@
+import { unstable_getServerSession } from "next-auth";
 import Image from "next/image";
 import { Message } from "../typings";
 
 type Props = {
 	message: Message;
+	session: Awaited<ReturnType<typeof unstable_getServerSession>>;
 };
 
-function MessageComponent({ message }: Props) {
-	const isUser = true;
+function MessageComponent({ message, session }: Props) {
+	const isUser = session?.user?.email === message.email;
 
 	return (
 		<div className={`flex w-fit ${isUser && "ml-auto"}`}>
