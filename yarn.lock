@@ -622,10 +622,10 @@ pusher@^5.1.1-beta:
     tweetnacl "^1.0.0"
     tweetnacl-util "^0.15.0"
 
-react-dom@19.2.4:
-  version "19.2.4"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.2.4.tgz#6fac6bd96f7db477d966c7ec17c1a2b1ad8e6591"
-  integrity sha512-AXJdLo8kgMbimY95O2aKQqsz2iWi9jMgKJhRBAxECE4IFxfcazB2LmzloIoibJI3C12IlY20+KFaLv+71bUJeQ==
+react-dom@19.2.5:
+  version "19.2.5"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.2.5.tgz#b8768b10837d0b8e9ca5b9e2d58dff3d880ea25e"
+  integrity sha512-J5bAZz+DXMMwW/wV3xzKke59Af6CHY7G4uYLN1OvBcKEsWOs4pQExj86BBKamxl/Ik5bx9whOrvBlSDfWzgSag==
   dependencies:
     scheduler "^0.27.0"
 
@@ -634,10 +634,10 @@ react-timeago@^8.0.0:
   resolved "https://registry.yarnpkg.com/react-timeago/-/react-timeago-8.3.0.tgz#117ebd37032df0cbfbfdb27136bb6e22f72348b3"
   integrity sha512-BeR0hj/5qqTc2+zxzBSQZMky6MmqwOtKseU3CSmcjKR5uXerej2QY34v2d+cdz11PoeVfAdWLX+qjM/UdZkUUg==
 
-react@19.2.4:
-  version "19.2.4"
-  resolved "https://registry.yarnpkg.com/react/-/react-19.2.4.tgz#438e57baa19b77cb23aab516cf635cd0579ee09a"
-  integrity sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==
+react@19.2.5:
+  version "19.2.5"
+  resolved "https://registry.yarnpkg.com/react/-/react-19.2.5.tgz#c888ab8b8ef33e2597fae8bdb2d77edbdb42858b"
+  integrity sha512-llUJLzz1zTUBrskt2pwZgLq59AemifIftw4aB7JxOqf1HY2FDaGDxgwpAPVzHU1kdWabH7FauP4i1oEeer2WCA==
 
 redis-errors@^1.0.0, redis-errors@^1.2.0:
   version "1.2.0"
