@@ -16,7 +16,7 @@
     "react-dom": "19.2.5",
     "react-timeago": "^8.0.0",
     "swr": "^2.0.0",
-    "uuid": "^13.0.0"
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@types/react": "19.2.14",
