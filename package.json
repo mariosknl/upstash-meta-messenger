@@ -12,14 +12,14 @@
     "next-auth": "^4.16.4",
     "pusher": "^5.1.1-beta",
     "pusher-js": "^8.0.0",
-    "react": "19.2.5",
-    "react-dom": "19.2.5",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
     "react-timeago": "^8.0.0",
     "swr": "^2.0.0",
     "uuid": "^14.0.0"
   },
   "devDependencies": {
-    "@types/react": "19.2.14",
+    "@types/react": "19.2.15",
     "@types/react-dom": "19.2.3",
     "@types/node": "24.12.2",
     "@types/react-timeago": "^4.1.3",
